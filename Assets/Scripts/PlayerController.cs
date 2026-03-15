@@ -1,30 +1,34 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float moveForce = 20f;
+    [SerializeField] private float maxSpeed = 5f;
+
+    private Rigidbody2D RB2D;
+    private float input;
+
+    private void Awake()
     {
-        
+        RB2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        input = Input.GetAxis("Horizontal");
+    }
+
+    private void FixedUpdate()
+    {
+        RB2D.AddForce(new Vector2(input * moveForce, 0f));
+
+        if (Mathf.Abs(RB2D.linearVelocity.x) > maxSpeed)
         {
-           Debug.Log("Backspace was pressed"); 
+            RB2D.linearVelocity = new Vector2(
+                Mathf.Sign(RB2D.linearVelocity.x) * maxSpeed,
+                RB2D.linearVelocity.y
+            );
         }
     }
 }
-
-
-// 4) Implement Player Movement 
-// Create a script that allows the player to move left and right. 
-// Movement should behave like a platformer character moving along the ground. 
-
-// The player should: 
-// • Move left when the left arrow key is pressed 
-// • Move right when the right arrow key is pressed 
-// Movement can be implemented using: 
-// • Rigidbody2D velocity, or forces applied to the Rigidbody2D 
