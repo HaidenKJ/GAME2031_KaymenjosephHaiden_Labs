@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D RB2D;
     private float input;
 
-    private void Awake()
+    private void Awake() 
     {
         RB2D = GetComponent<Rigidbody2D>();
     }
