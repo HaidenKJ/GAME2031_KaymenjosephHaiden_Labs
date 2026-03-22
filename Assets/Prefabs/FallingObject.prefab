@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f30dad959441124eb01e27986d96eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingObject
-  pointRange: {x: 0, y: 0}
+  pointRange: {x: 0, y: 5}
 --- !u!58 &1836751506366340717
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -168,5 +168,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 5}
   m_Radius: 0.5
