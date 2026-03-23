@@ -999,6 +999,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1877223707693870411, guid: f572d3d69a728084f98cae085bd2dde9, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2652079635561828839, guid: f572d3d69a728084f98cae085bd2dde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
