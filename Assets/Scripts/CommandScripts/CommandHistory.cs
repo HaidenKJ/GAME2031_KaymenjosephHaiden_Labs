@@ -21,22 +21,17 @@ public class CommandHistory
 
     public void Undo()
     {
-        if (index >= 0) return;
+        if (index < 0) return;
         
-            commandList[index].Undo();
-            index--;
-        
+        commandList[index].Undo();
+        index--;
     }
 
     public void Redo()
     {
-        if (index < commandList.Count - 1) return;
+        if (index >= commandList.Count - 1) return;
         
-            index++;
-            commandList[index].Execute();
-        
+        index++;
+        commandList[index].Execute();
     }
-
-
-
 }
