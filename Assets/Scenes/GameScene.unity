@@ -119,26 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &48398602 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2744436666772744952, guid: f572d3d69a728084f98cae085bd2dde9, type: 3}
-  m_PrefabInstance: {fileID: 4278704366396020609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &48398608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48398602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e039126114d3f4183faed9c6b455ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawner
-  fallingObjectPrefab: {fileID: 7772937686342318667, guid: f48bb2f3a10324f4ea3878b33e864bea, type: 3}
-  ySpawnPosition: 6
-  xSpawnRange: {x: -8.2, y: 8.2}
 --- !u!1 &163411711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,10 +1040,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2744436666772744952, guid: f572d3d69a728084f98cae085bd2dde9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 48398608}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f572d3d69a728084f98cae085bd2dde9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

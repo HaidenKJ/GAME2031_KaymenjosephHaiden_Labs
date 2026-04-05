@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1877223707693870411}
   - component: {fileID: 2807642392054960116}
   - component: {fileID: 4131347550568820321}
+  - component: {fileID: 2543602132274699546}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +111,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -184,6 +185,21 @@ MonoBehaviour:
   maxSpeed: 5
   scoreText: {fileID: 0}
   score: 0
+--- !u!114 &2543602132274699546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2744436666772744952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e039126114d3f4183faed9c6b455ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawner
+  fallingObjectPrefab: {fileID: 7772937686342318667, guid: f48bb2f3a10324f4ea3878b33e864bea, type: 3}
+  ySpawnPosition: 6
+  xSpawnRange: {x: -8.2, y: 8.2}
 --- !u!1 &5246442179809087903
 GameObject:
   m_ObjectHideFlags: 0
