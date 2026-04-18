@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class FallingObject : MonoBehaviour
 {
+    public static event System.Action OnFallingObjectDestroyed;
     [SerializeField] private Vector2Int pointRange;
     private int points;
 
@@ -22,6 +23,13 @@ public class FallingObject : MonoBehaviour
         {
             playerController.IncrementScore(points);
             Debug.Log("+" + points);
+        }
+
+        
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            OnFallingObjectDestroyed?.Invoke();
+            Debug.Log("Falling object collided with ground, lives decreased by 1");
         }
 
         Destroy(gameObject);
